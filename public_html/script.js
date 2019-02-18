@@ -105,6 +105,17 @@ function processReceiverUpdate(data) {
 
 		// Call the function update
 		plane.updateData(now, ac);
+
+                // set airline logo image if available
+		console.log(plane)
+		console.log(plane.airline)
+		if (plane.airline !== null){
+                        $('img', plane.tr.cells[3]).show();
+			$('img', plane.tr.cells[3]).attr('src', AirlinePath + plane.airline.image);
+			$('img', plane.tr.cells[3]).attr('title', plane.airline.name);
+		} else {
+                        $('img', plane.tr.cells[3]).hide();//css('display', 'none');
+                }
 	}
 }
 
@@ -354,7 +365,7 @@ function initialize_map() {
                 sortByDistance();
         } else {
 	        SitePosition = null;
-                PlaneRowTemplate.cells[6].style.display = 'none'; // hide distance column
+                PlaneRowTemplate.cells[7].style.display = 'none'; // hide distance column
                 document.getElementById("distance").style.display = 'none'; // hide distance header
                 sortByAltitude();
         }
@@ -795,13 +806,13 @@ function refreshTableInfo() {
 
                         // ICAO doesn't change
                         tableplane.tr.cells[2].textContent = (tableplane.flight !== null ? tableplane.flight : "");
-                        tableplane.tr.cells[3].textContent = (tableplane.squawk !== null ? tableplane.squawk : "");
-                        tableplane.tr.cells[4].textContent = format_altitude_brief(tableplane.altitude, tableplane.vert_rate);
-                        tableplane.tr.cells[5].textContent = format_speed_brief(tableplane.speed);
-                        tableplane.tr.cells[6].textContent = format_distance_brief(tableplane.sitedist);
-                        tableplane.tr.cells[7].textContent = format_track_brief(tableplane.track);
-                        tableplane.tr.cells[8].textContent = tableplane.messages;
-                        tableplane.tr.cells[9].textContent = tableplane.seen.toFixed(0);
+                        tableplane.tr.cells[4].textContent = (tableplane.squawk !== null ? tableplane.squawk : "");
+                        tableplane.tr.cells[5].textContent = format_altitude_brief(tableplane.altitude, tableplane.vert_rate);
+                        tableplane.tr.cells[6].textContent = format_speed_brief(tableplane.speed);
+                        tableplane.tr.cells[7].textContent = format_distance_brief(tableplane.sitedist);
+                        tableplane.tr.cells[8].textContent = format_track_brief(tableplane.track);
+                        tableplane.tr.cells[9].textContent = tableplane.messages;
+                        tableplane.tr.cells[10].textContent = tableplane.seen.toFixed(0);
                         tableplane.tr.className = classes;
 		}
 	}

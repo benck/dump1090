@@ -17,7 +17,7 @@ MessageRateInTitle = false;
 // and in the detailed plane info. If ShowOtherUnits is true,
 // then the other unit will also be shown in the detailed plane
 // info.
-Metric = false;
+Metric = "false;"
 ShowOtherUnits = true;
 
 // -- Map settings ----------------------------------------
@@ -26,8 +26,8 @@ ShowOtherUnits = true;
 // degrees.
 
 // Default center of the map.
-DefaultCenterLat = 45.0;
-DefaultCenterLon = 9.0;
+DefaultCenterLat = "25.023206"
+DefaultCenterLon = "121.554562"
 // The google maps zoom level, 0 - 16, lower is further out
 DefaultZoomLvl   = 7;
 
@@ -113,6 +113,9 @@ ShowFlags = true;
 // Path to country flags (can be a relative or absolute URL; include a trailing /)
 FlagPath = "flags-tiny/";
 
+// Path to airlines logos (can be a relative or absolute URL; include a trailing /)
+AirlinePath = "airlines-tiny/";
+
 // Set to true to enable the ChartBundle base layers (US coverage only)
 ChartBundleLayers = true;
 
@@ -121,9 +124,9 @@ ChartBundleLayers = true;
 // https://www.bingmapsportal.com/ (you need a "basic key")
 //
 // Be sure to quote your key:
-//   BingMapsAPIKey = "your key here";
+//   BingMapsAPIKey = "Ar6dvEsu3ihCijY3pVaymZMGGcp8o8vLeKZUWZBGY_HbEcWWv5xDShXDsOhFfOns"
 //
-BingMapsAPIKey = null;
+BingMapsAPIKey = "Ar6dvEsu3ihCijY3pVaymZMGGcp8o8vLeKZUWZBGY_HbEcWWv5xDShXDsOhFfOns"
 
 // Provide a Mapzen API key here to enable the Mapzen vector tile layer.
 // You can obtain a free key at https://mapzen.com/developers/

@@ -5,6 +5,7 @@ function PlaneObject(icao) {
         this.icao      = icao;
         this.icaorange = findICAORange(icao);
         this.flight    = null;
+        this.airline   = null;
 	this.squawk    = null;
 	this.selected  = false;
         this.category  = null;
@@ -373,8 +374,10 @@ PlaneObject.prototype.updateData = function(receiver_timestamp, data) {
                         }
                 }
         }
-        if (typeof data.flight !== "undefined")
+        if (typeof data.flight !== "undefined"){
 		this.flight	= data.flight;
+		this.airline    = findAirlines(this.flight);
+	}
         if (typeof data.squawk !== "undefined")
 		this.squawk	= data.squawk;
         if (typeof data.category !== "undefined")

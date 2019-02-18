@@ -20,6 +20,7 @@
 		<script type="text/javascript" src="planeObject.js"></script>
 		<script type="text/javascript" src="formatter.js"></script>
 		<script type="text/javascript" src="flags.js"></script>
+		<script type="text/javascript" src="airlines.js"></script>
 		<script type="text/javascript" src="layers.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 		<script type="text/javascript" src="coolclock/excanvas.js"></script>
@@ -180,6 +181,7 @@
 								<td id="icao" onclick="sortByICAO();">ICAO</td>
 								<td id="flag" onclick="sortByCountry()"><!-- column for flag image --></td>
 								<td id="flight" onclick="sortByFlight();">Flight</td>
+								<td id="airline"></td>
 								<td id="squawk" onclick="sortBySquawk();" style="text-align: right">Squawk</td>
 								<td id="altitude" onclick="sortByAltitude();" style="text-align: right">Altitude</td>
 								<td id="speed" onclick="sortBySpeed();" style="text-align: right">Speed</td>
@@ -194,6 +196,7 @@
 								<td>ICAO</td>
 								<td><img style="width: 20px; height=12px" src="about:blank" alt="Flag"></td>
 								<td>FLIGHT</td>
+								<td><img style="width: 15px; height: 15px" src="about:blank" alt="Airline Logo"></td>
 								<td style="text-align: right">SQUAWK</td>
 								<td style="text-align: right">ALTITUDE</td>
 								<td style="text-align: right">SPEED</td>
