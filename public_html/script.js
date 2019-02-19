@@ -107,8 +107,6 @@ function processReceiverUpdate(data) {
 		plane.updateData(now, ac);
 
                 // set airline logo image if available
-		console.log(plane)
-		console.log(plane.airline)
 		if (plane.airline !== null){
                         $('img', plane.tr.cells[3]).show();
 			$('img', plane.tr.cells[3]).attr('src', AirlinePath + plane.airline.image);
