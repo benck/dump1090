@@ -699,6 +699,12 @@ function refreshSelected() {
                 $('#selected_links').css('display','none');
         }
 
+	if (selected.airline !== null) {
+		$('#selected_airlinelogo').attr('src', AirlinePath + selected.airline.image).attr('title', selected.airline.name).show();
+	}else{
+		$('#selected_airlinelogo').hide();
+	}
+
         if (selected.registration !== null) {
                 $('#selected_registration').text(selected.registration);
         } else {
